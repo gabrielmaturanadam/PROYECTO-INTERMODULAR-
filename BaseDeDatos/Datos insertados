@@ -1,0 +1,61 @@
+INSERT INTO profesor (nombre, apellido, email, edad, rol) VALUES
+('Carlos', 'Admin', 'admin@fightclub.com', 45, 'ADMIN'),
+('Juan', 'Perez', 'juan@fightclub.com', 38, 'PROFESOR'),
+('Ana', 'Lopez', 'ana@fightclub.com', 34, 'PROFESOR'),
+('Luis', 'Martinez', 'luis@fightclub.com', 40, 'PROFESOR');
+
+
+INSERT INTO disciplina (nombre) VALUES
+('MUAY THAI'),
+('MMA'),
+('BOXEO'),
+('KICKBOXING'),
+('JIU JITSU'),
+('SAMBO'),
+('JUDO'),
+('KARATE');
+
+INSERT INTO curso (id_disciplina, nivel, id_tutor) VALUES
+(1, 'BASICO', 2),
+(1, 'AVANZADO', 3),
+(2, 'BASICO', 4),
+(2, 'AVANZADO', 1),
+(3, 'BASICO', NULL),
+(3, 'AVANZADO', NULL),
+(4, 'BASICO', NULL),
+(4, 'AVANZADO', NULL);
+
+
+INSERT INTO profesor_curso VALUES
+(2,1),(3,2),(3,3),(4,4),
+(2,5),(4,6),(3,7),(2,8);
+
+
+INSERT INTO alumno (nombre, apellido, email, telefono) VALUES
+('Pedro', 'Sanchez', 'pedro@mail.com', '111111111'),
+('Lucia', 'Ramirez', 'lucia@mail.com', '222222222'),
+('Diego', 'Torres', 'diego@mail.com', '333333333'),
+('Sofia', 'Diaz', 'sofia@mail.com', '444444444');
+
+
+INSERT INTO matricula VALUES
+(1,1),(1,3),
+(2,2),(2,4),
+(3,5),(3,6),
+(4,7),(4,8);
+
+INSERT INTO clase (id_curso, nombre) VALUES
+(1,'Tecnicas basicas'),
+(1,'Combate ligero'),
+(2,'Sparring avanzado'),
+(3,'Defensa personal'),
+(4,'Grappling'),
+(5,'Golpeo basico'),
+(6,'Boxeo avanzado');
+
+
+INSERT INTO alumno_clase VALUES
+(1,1),(1,2),
+(2,3),(2,4),
+(3,5),(3,6),
+(4,7);
